@@ -1,0 +1,14 @@
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+COPY *.csproj /backendApi/
+RUN dotnet restore ./backendApi
+
+COPY . /backendApi
+RUN dotnet publish -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
+
+WORKDIR /backendApi
+
+COPY --from=build /backendApi/out ./
+ENTRYPOINT ["dotnet", "backendApi.dll"]

@@ -21,7 +21,7 @@
 
 
 ### Docker run
-``docker run {Tag-To-Attach-To-Image}``
+``docker run {Tag-To-Attach-To-Image} {Optional:Can run commands here for the container i.e. pytest }``
 
 ### Docker run Interactive mode
 `` docker run -it {Tag-To-Attach-To-Image} /bin/sh ``
@@ -31,3 +31,10 @@
 
 ### Docker Compose Run
 `` docker compose up``
+
+
+### Lessons learned
+- When working with containers, runners and proxies make sure you add these values into the docker run command
+```
+docker run -e no_proxy=$no_proxy -e HTTP_PROXY=$HTTP_PROXY -e HTTPS_PROXY=$HTTPS_PROXY {Tag-To-Attach-To-Image}
+```

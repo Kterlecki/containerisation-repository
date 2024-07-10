@@ -23,13 +23,13 @@
 ### Docker run
 ``docker run {Tag-To-Attach-To-Image} {Optional:Can run commands here for the container i.e. pytest }``
 
-### Docker run Interactive mode
+###### Docker run Interactive mode
 `` docker run -it {Tag-To-Attach-To-Image} /bin/sh ``
 
-### Docker Compose build - must be docker Compose V2
+##### Docker Compose build - must be docker Compose V2
 `` docker compose build --no-cache``
 
-### Docker Compose Run
+#### Docker Compose Run
 `` docker compose up``
 
 

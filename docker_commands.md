@@ -25,6 +25,12 @@
 
 ###### Docker run Interactive mode
 `` docker run -it {Tag-To-Attach-To-Image} /bin/sh ``
+###### Docker run with mounting volume host:container
+`` docker run -v "$(pwd)"/test-results:/test-result {Tag-To-Attach-To-Image}  ``
+###### Docker run with .env file
+`` docker run --env-file ./.env {Tag-To-Attach-To-Image}  ``
+###### Docker run with entrypoint
+`` docker run --entrypoint {your entrypoint} {Tag-To-Attach-To-Image}  ``
 
 ##### Docker Compose build - must be docker Compose V2
 `` docker compose build --no-cache``

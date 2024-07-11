@@ -38,6 +38,9 @@
 #### Docker Compose Run
 `` docker compose up``
 
+#### Docker Compose check configuration - very useful for checking your container configurations
+`` docker compose config``
+
 
 ### Lessons learned
 - When working with containers, runners and proxies make sure you add these values into the docker run command

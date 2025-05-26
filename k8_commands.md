@@ -39,3 +39,23 @@ Lists all services running in the kube-system namespace.
 ### Describe the default namespace
 Shows detailed information about the 'default' namespace.
 ```kubectl describe ns default```
+
+### List pods
+Lists all pods in the current namespace.
+```kubectl get pods```
+
+### Get a specific deployment
+Displays information about the 'hello-deploy' deployment (replace with your deployment name).
+```kubectl get deploy hello-deploy```
+
+### Describe a deployment
+Shows detailed information about the 'hello-deploy' deployment, including events and pod template.
+```kubectl describe deploy hello-deploy```
+
+### List ReplicaSets
+Lists all ReplicaSets in the current namespace, useful for checking the status of deployments.
+```kubectl get rs```
+
+### Check rollout status of a deployment
+Displays the rollout status of the 'hello-deploy' deployment.
+```kubectl rollout status deployment hello-deploy```

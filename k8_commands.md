@@ -59,3 +59,7 @@ Lists all ReplicaSets in the current namespace, useful for checking the status o
 ### Check rollout status of a deployment
 Displays the rollout status of the 'hello-deploy' deployment.
 ```kubectl rollout status deployment hello-deploy```
+
+### Check rollout status of a deployment
+Displays the rollout history of the 'hello-deploy' deployment.
+```kubectl rollout history deployment hello-deploy```
